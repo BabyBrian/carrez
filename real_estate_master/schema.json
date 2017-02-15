@@ -1,0 +1,20 @@
+{
+	
+    "prix": "10000",
+    "adresse": {
+		"libelle": {
+			"type": "integer"
+		},
+		"nom_de_rue": {
+			"type": "string"
+		},
+		"code_postale": {
+			"type": "integer"
+		},
+		"ville": {
+			"type": "string"
+		}
+	},
+    "surface": "140",
+    
+}

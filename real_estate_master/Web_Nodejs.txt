@@ -1,0 +1,21 @@
+Directives TD
+0 Caracteristiques 
+-Asynchrone
+-Synchrone
+-monothread
+-modules
+
+1 Installer Node.js
+
+2 https://github.com/fmontaigne/real-estate
+dezipper dans TP3
+
+3 Ouvrir un invite de commande
+Rappel commandes (cd,cd..,mkdir,rmdir,cat,dir,ls
+On se place dans le repertoire avec cd
+Puis node app.js
+npm install
+Port cible http://localhost:3000
+
+4 completer code 
+ajouter formulaire
