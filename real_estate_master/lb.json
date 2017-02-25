@@ -1,7 +1,8 @@
 {
 	
-    "prix": "100",
+    "prix": "100000",
     "ville": "Neuilly",
-    "surface": "540",
+	"type": "Maison",
+    "surface": "540"
     
 }
