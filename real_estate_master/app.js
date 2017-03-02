@@ -4,12 +4,13 @@ var request = require( 'request' );
 var cheerio = require( 'cheerio' );
 //creating a new express server
 var app = express();
-
+var message;
 //setting EJS as the templating engine
 app.set( 'view engine', 'ejs' );
 
 //setting the 'assets' directory as our static assets dir (css, js, img, etc...)
-app.use( '/assets', express.static( 'assets' ) );
+//app.use( '/assets', express.static( 'assets' ) );
+app.use(express.static(__dirname + '/public'));
 
 app.get('/',function(req,res){
     res.render('pages/index');
@@ -66,15 +67,15 @@ function getMAEstimation(lbcData, routeResponse)
 				//console.log('MA ref:', ref)
 					if(maData.priceAppart && maData.priceHouse)
 					{
+						//message=0;
+						message = isGoodDeal(lbcData,ref);
+						
 						routeResponse.render('pages/index', 
 						{
-							//message : "hello"
-							
-							message: {
-								lbcData,ref,deal:{good: isGoodDeal(lbcData,ref)}
+							message,lbcData,ref
 								
-							    }
 						})
+						console.log('conclusion: ',message)
 					}
 				}else{
 					console.log('erreur lors du scrapping de MA')
